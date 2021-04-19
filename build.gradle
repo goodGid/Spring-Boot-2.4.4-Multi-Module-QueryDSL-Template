@@ -2,13 +2,23 @@ buildscript {
     ext {
         springBootVersion = '2.4.4'
         dependencyManagementVersion = '1.0.11.RELEASE'
+
+        // for QueryDSL
+        queryDslVersion = '4.4.0'
+        querydslPluginVersion = '1.0.10'
     }
     repositories {
         mavenCentral()
+
+        // for QueryDSL
+        maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
         classpath "io.spring.gradle:dependency-management-plugin:${dependencyManagementVersion}"
+
+        // for QueryDSL
+        classpath "gradle.plugin.com.ewerk.gradle.plugins:querydsl-plugin:${querydslPluginVersion}"
     }
 }
 
@@ -33,6 +43,13 @@ subprojects {
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
         implementation 'org.springframework.boot:spring-boot-starter-test'
+
+        // for QueryDSL
+        implementation "com.querydsl:querydsl-core:${queryDslVersion}"
+        implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
+        annotationProcessor "com.querydsl:querydsl-apt:${queryDslVersion}:jpa"
+        annotationProcessor "jakarta.persistence:jakarta.persistence-api"
+        annotationProcessor "jakarta.annotation:jakarta.annotation-api"
     }
 }
 
@@ -40,4 +57,9 @@ project(':module-api') {
     dependencies {
         compile project(':module-common')
     }
+}
+
+// for QueryDSL
+task cleanGeneatedDir(type: Delete) {
+    delete file('src/main/generated')
 }
