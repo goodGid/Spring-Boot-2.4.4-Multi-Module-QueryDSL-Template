@@ -1,4 +1,4 @@
-# Spring-QueryDSL-Template
+# Spring-Multi-Module-QueryDSL-Template
 
 ## Goal
 
