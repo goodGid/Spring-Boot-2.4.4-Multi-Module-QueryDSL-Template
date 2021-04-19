@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: "local"
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+
+profile-name: "local"
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: beta
+
+profile-name: "beta"
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: real
+
+profile-name: "real"

@@ -1,0 +1,4 @@
+rootProject.name = 'QueryDSL'
+include 'module-api'
+include 'module-common'
+

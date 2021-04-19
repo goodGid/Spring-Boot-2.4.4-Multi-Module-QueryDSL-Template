@@ -1,0 +1,22 @@
+# Option
+# https://goodgid.github.io/Spring-Boot-SQL-Option
+# https://goodgid.github.io/Spring-Boot-SQL-Option-Show-SQL
+
+spring:
+  datasource:
+    url: ${db.url}
+    username: ${db.username}
+    password: ${db.password}
+    driver-class-name: ${db.driver-class-name}
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        show_sql: true # to System OutDataSourceConfiguration
+        format_sql: true
+        use_sql_comments: true
+        jdbc:
+          time_zone: Asia/Seoul # @CreatedDate 필드의 Time Zone 값 설정
