@@ -14,8 +14,11 @@
 
 ## Structure
 
-* Parent : module-common
-* Child : module-api
+* Parent
+  - module-common : Repository, Property, Constatnt
+
+* Child
+  - module-api : Controller, Service
 
 > build.gradle in Root
 ``` java
@@ -28,5 +31,6 @@ project(':module-api') {
 
 ## Implement
 
-* module-api : Controller, Service
-* module-common : Repository, Property, Constatnt
+* QueryDSL Setting Commit : [641b270](https://bit.ly/3x8LPxc)
+
+
