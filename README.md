@@ -15,7 +15,7 @@
 ## Structure
 
 * Parent
-  - module-common : Repository, Property, Constatnt
+  - module-common : Repository, Property, Constant
 
 * Child
   - module-api : Controller, Service
