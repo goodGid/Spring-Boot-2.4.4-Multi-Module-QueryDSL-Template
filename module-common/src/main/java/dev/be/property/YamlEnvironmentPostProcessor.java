@@ -37,6 +37,7 @@ public class YamlEnvironmentPostProcessor implements EnvironmentPostProcessor {
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
 
         // Set Default Profile
+        // ref : https://goodgid.github.io/Analyzing-the-Feign-Client-and-Use/#profile-%EC%84%A4%EC%A0%95
         boolean isNotValidProfileActive = !environment.acceptsProfiles(Profiles.of(acceptsProfiles));
 
         if (isNotValidProfileActive) {
@@ -44,6 +45,7 @@ public class YamlEnvironmentPostProcessor implements EnvironmentPostProcessor {
         }
 
         // Load Custom *.yml
+        // ref : https://goodgid.github.io/Analyzing-the-Feign-Client-and-Use/#custom-yml-%EC%82%AC%EC%9A%A9
         try {
             List<Resource> resourceList = new ArrayList<>();
             for (String propertyUri : propertyUris) {
