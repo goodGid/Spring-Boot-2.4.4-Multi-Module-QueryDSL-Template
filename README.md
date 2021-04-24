@@ -34,3 +34,6 @@ project(':module-api') {
 * QueryDSL Setting Commit : [641b270](https://bit.ly/3x8LPxc)
 
 
+## Reference
+
+* [[gradle] 그레이들 Annotation processor 와 Querydsl](http://honeymon.io/tech/2020/07/09/gradle-annotation-processor-with-querydsl.html)
