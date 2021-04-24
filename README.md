@@ -29,6 +29,15 @@ project(':module-api') {
 } 
 ```
 
+## Setup
+
+* Need to add **DB config** in module-common to /config/custom/db.yml
+
+![image](https://user-images.githubusercontent.com/18522341/115961986-16020880-a554-11eb-8c98-76f727b24c8c.png)
+
+
+
+
 ## Implement
 
 * QueryDSL Setting Commit : [641b270](https://bit.ly/3x8LPxc)
