@@ -7,10 +7,10 @@
 ## Spec
 
 * Java 11
-* Spring Boot
+* Spring Boot 2.4.4
 * MySQL
 * JPA & QueryDSL
-* Gradle
+* Gradle 6.8.3
 
 ## Structure
 
